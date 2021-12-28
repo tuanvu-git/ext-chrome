@@ -1,0 +1,39 @@
+{
+    "name": "Getting Started Example",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "app.js"
+        ]
+    }],
+    "permissions": [
+        "storage",
+        "notifications",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/pikachu-pokemon.png",
+            "32": "/images/pikachu-pokemon.png",
+            "48": "/images/pikachu-pokemon.png",
+            "128": "/images/pikachu-pokemon.png"
+        }
+    },
+    "icons": {
+        "16": "/images/pikachu-pokemon.png",
+        "32": "/images/pikachu-pokemon.png",
+        "48": "/images/pikachu-pokemon.png",
+        "128": "/images/pikachu-pokemon.png"
+    }
+}
